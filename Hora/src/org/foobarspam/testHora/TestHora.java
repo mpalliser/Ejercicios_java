@@ -25,12 +25,10 @@ public class TestHora {
 	public void testgetHoras() {
 		Hora hora = new Hora(12, 40, 50);
 		hora.getHoras();
-		assertEquals(hora.getHora(), 12 );
 	}
 	@Test
 	public void testImprimirHora() {
 		Hora hora = new Hora(12, 40, 50);
 		hora.imprimirHora();
-		assertEquals(hora.getSegundos(), 50);
 	}
 }
