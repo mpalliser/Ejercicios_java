@@ -29,6 +29,43 @@ public class Estacion {
 	public void consultarEstacion() {
 		System.out.println("\nid: " + getID() + "\ndireccion: " + getDireccion() + "\nnumeroAnclajes: " + getNumeroAnclajes());
 	}
+
+	public int anclajesLibres() {
+		int anclajesLibres = 0;
+		for (Bicicleta anclaje : anclajes){
+			if (anclaje == null){
+				anclajesLibres ++;
+			}
+		}
+		return anclajesLibres;
+	}
+
+	public void anclarBicicleta(Bicicleta bicicleta) {
+		for (int anclaje = 0 ; anclaje < anclajes.length; anclaje++){
+			if (anclajes[anclaje] == null){
+				anclajes[anclaje] = bicicleta;
+				break;
+			}
+		}
+	}
+
+	public int consultarAnclajes() {
+		int anclajesLibres = 0;
+		for (int anclaje = 0 ; anclaje < anclajes.length; anclaje++){
+			if (anclajes[anclaje] == null){
+				anclajesLibres ++;
+				System.out.println("Anclaje " + (anclaje+1) + " libre");
+			}else {
+				System.out.println("Anclaje " + (anclaje+1) +" " + anclajes[anclaje].getID());
+			}
+		}
+		return anclajesLibres;
+	}
+
+	public void mostrarAnclaje(Bicicleta bicicleta, int numeroAnclaje) {
+		System.out.println("Bicicleta: " + bicicleta.getID() + " anclada en el anclaje: " + (numeroAnclaje+1));
+	}
+
 	
 
 }
