@@ -52,9 +52,18 @@ public class TestsBiciPalma {
 	@Test
 	public void testRetirarBicicleta(){
 		Estacion estacion = new Estacion(1,"Manacor", 6);
+		int[] bicicletas = {291, 292, 293, 294};
+		for (int id: bicicletas){
+			Bicicleta bicicleta = new Bicicleta(id);
+			estacion.anclarBicicleta(bicicleta);
+		}
 		System.out.println("\n **** caso TEST retirar bicicleta **** \n");
 		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("000456789", true);
-		
+		System.out.println("¿Tarjeta de usuario Activada? (True/False): " + estacion.leerTarjetaUsuario(tarjetaUsuario));
+		estacion.retirarBicicleta(tarjetaUsuario);
+		estacion.consultarAnclajes();
+		assertEquals(estacion.anclajesLibres(), 3);
+		System.out.println("anclajesLibres: " + estacion.anclajesLibres());
 	}
 
 
