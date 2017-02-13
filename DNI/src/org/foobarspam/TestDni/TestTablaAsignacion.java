@@ -25,8 +25,16 @@ public class TestTablaAsignacion {
 		assertEquals(tablaPrueba.letraValida('I'), false);
 		assertEquals(tablaPrueba.letraValida('Ñ'), false);
 		assertEquals(tablaPrueba.letraValida('O'), false);
-
-
 }
+	@Test
+	public void testCalcularLetra(){
+		TablaAsignacion tablaPrueba = new TablaAsignacion();
+		assertEquals(tablaPrueba.calcularLetra("72376173"), 'A');
+		assertEquals(tablaPrueba.calcularLetra("78484464"), 'T');
+		assertEquals(tablaPrueba.calcularLetra("26861694"), 'V');
+		assertEquals(tablaPrueba.calcularLetra("34168723"), 'S');
+
+		
+	}
 
 }
