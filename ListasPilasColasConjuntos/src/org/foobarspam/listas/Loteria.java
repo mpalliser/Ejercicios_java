@@ -1,24 +1,24 @@
 package org.foobarspam.listas;
 
-import java.awt.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 
 public class Loteria {
 	//***************		PROPIEDADES		***************	
 
-	private ArrayList<Integer> numerosLoteria = new ArrayList<Integer>();
-	private ArrayList<Integer> numerosReintegro = new ArrayList<Integer>();
+	private List<Integer> numerosLoteria = new ArrayList<Integer>();
+	private List<Integer> numerosReintegro = new ArrayList<Integer>();
 	
 	//***************		CONSTRUCTOR		***************	
 	public Loteria(){
 		rellenarNumeros();
 	}
 	//***************		GETTERS		***************	
-	public ArrayList<Integer> getNumeros(){
+	public List<Integer> getNumeros(){
 		return this.numerosLoteria;
 	}
-	public ArrayList<Integer> getReintegro(){
+	public List<Integer> getReintegro(){
 		return this.numerosReintegro;
 	}
 	
