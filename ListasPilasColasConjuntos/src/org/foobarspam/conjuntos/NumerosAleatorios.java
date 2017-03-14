@@ -18,15 +18,9 @@ public class NumerosAleatorios {
 	}
 	//***************		METODOS		***************	
 	public void generarNumeros(){
-		for (int i = 0; i<= 7 ; i++){
-			boolean bandera = true;
-			while (bandera){
-				numeroAleatorio();
-				if (!almacen.contains(numero)){
-					almacen.add(numero);
-					bandera = false;
-				}
-			}	
+		while (almacen.size()<8){
+			numeroAleatorio();
+			almacen.add(numero);
 		}
 	}
 	public void numeroAleatorio(){
