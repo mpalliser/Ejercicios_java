@@ -1,12 +1,15 @@
 package figuras;
 
-public class Rectangulo extends FiguraGeometrica {
+public class Rectangulo extends FiguraGeometrica implements Drawable {
 	
 	//Propiedades privadas
 	private double altura;
 	private double anchura;
 	
 	//Constructor
+	public Rectangulo (String nombre){
+		super(nombre);
+	}
 	public Rectangulo(String nombre,double altura,double anchura){
 		super(nombre);
 		this.altura = altura;
@@ -31,5 +34,9 @@ public class Rectangulo extends FiguraGeometrica {
 	@Override
 	public double area(){
 		return anchura * altura;
+	}
+
+	public void applyTheme(){
+		System.out.println("Tema aplicado en " + this.getNombre());
 	}
 }

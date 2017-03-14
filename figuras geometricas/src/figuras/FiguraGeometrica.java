@@ -1,6 +1,6 @@
 package figuras;
 
-public abstract class FiguraGeometrica {
+public abstract class FiguraGeometrica implements Drawable {
 	
 	//Propiedades privadas
 	private String nombre ;
@@ -20,5 +20,8 @@ public abstract class FiguraGeometrica {
 	}
 	//OCP(Open Closed Principle)
 	public abstract double area();
-
+	
+	public void draw(){
+		System.out.println(this.getNombre() + ": es drawable");
+	}
 }

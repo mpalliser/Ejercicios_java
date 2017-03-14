@@ -6,6 +6,9 @@ public class Circulo extends FiguraGeometrica {
 	private double radio;
 	private final double PI = 3.14;
 	
+	public Circulo (String nombre){
+		super(nombre);
+	}
 	public Circulo(String nombre, double radio){
 		super(nombre);
 		this.radio = radio;
@@ -24,4 +27,8 @@ public class Circulo extends FiguraGeometrica {
 	public double area(){
 		return Math.pow(this.radio, 2) * PI; 
 	}
+	public void applyTheme(){
+		System.out.println("Tema aplicado en " + this.getNombre());
+	}
+
 }

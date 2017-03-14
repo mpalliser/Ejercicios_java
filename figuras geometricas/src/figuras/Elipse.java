@@ -8,6 +8,9 @@ public class Elipse extends FiguraGeometrica {
 	private final double PI = 3.14;
 	
 	//Constructor
+	public Elipse (String nombre){
+		super(nombre);
+	}
 	public Elipse(String nombre, double semiejeMenor, double semiejeMayor) {
 		super(nombre);
 		this.semiejeMenor = semiejeMenor;
@@ -34,4 +37,6 @@ public class Elipse extends FiguraGeometrica {
 	public double area(){
 		return PI * semiejeMenor * semiejeMayor;
 	}
+	public void applyTheme() {throw new ArithmeticException();}
+
 }
