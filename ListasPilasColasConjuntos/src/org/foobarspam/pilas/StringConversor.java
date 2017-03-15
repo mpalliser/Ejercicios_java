@@ -6,7 +6,7 @@ public class StringConversor {
 	
 	//***************		PROPIEDADES		***************	
 	private String frase = null;  
-	Stack <Character> pila = new Stack<>();
+	private Stack <Character> pila = new Stack<>();
 	
 	//***************		CONSTRUCTOR		***************	
 	public StringConversor(){
@@ -15,21 +15,27 @@ public class StringConversor {
 		this.frase = fraseIntroducida;
 	}
 	
+	//***************		GETTERS		***************	
+	public String getFrase(){
+		return this.frase;
+	}
+	public Stack getPila() {
+		return this.pila;
+	}
+	
 	//***************		METODOS		***************	
-	public void reverseString() {
+	public void llenarPila() {
 		for (int i= 0 ; i < frase.length(); i++){
 			pila.push(frase.charAt(i));
 		}
 	}
 	public void printPila() {
-		for (char i : pila){
-			System.out.print(i);
+		while (pila.size()> 0){
+			System.out.print(pila.pop());
 		}
 	}
-	//public void printReversePila(){
-		//pila.peek();
-		//System.out.println(pila.peek());	
-	//}
+
+
 	
 
 
