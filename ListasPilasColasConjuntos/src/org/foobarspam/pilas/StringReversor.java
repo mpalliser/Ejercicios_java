@@ -2,16 +2,16 @@ package org.foobarspam.pilas;
 
 import java.util.Stack;
 
-public class StringConversor {
+public class StringReversor {
 	
 	//***************		PROPIEDADES		***************	
 	private String frase = null;  
 	private Stack <Character> pila = new Stack<>();
 	
 	//***************		CONSTRUCTOR		***************	
-	public StringConversor(){
+	public StringReversor(){
 	}
-	public StringConversor(String fraseIntroducida){
+	public StringReversor(String fraseIntroducida){
 		this.frase = fraseIntroducida;
 	}
 	
