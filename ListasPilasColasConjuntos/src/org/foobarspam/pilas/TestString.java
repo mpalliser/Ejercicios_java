@@ -15,7 +15,7 @@ public class TestString {
 	
 	@Test
 	public void testFrase() {
-		assertEquals(test.getFrase().length(), 4);
+		assertEquals(test.getFrase().length(), 16);
 		assertEquals(test.getPila().size(), 0);
 	}
 	
@@ -23,7 +23,7 @@ public class TestString {
 	public void testPila(){
 		test.llenarPila();
 		//al llenar la pila esta contiene cuatro Strings
-		assertEquals(test.getPila().size(), 4);
+		assertEquals(test.getPila().size(), 16);
 	}
 	@Test
 	public void testPrint(){
