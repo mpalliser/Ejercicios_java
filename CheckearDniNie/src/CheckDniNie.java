@@ -34,11 +34,21 @@ public class CheckDniNie {
 			testearIdentificacion(test);
 		}
 		System.out.println("***************************");
+		System.out.println("Test DNI erroneos");
 		for(int i= 0; i <15; i++){
 			crearDni();
 		}
 		for(String dni : listaDniErroneos){
 			testearIdentificacion(dni);
+		}
+		for (int i = 0; i<15; i++){
+			crearNie();
+		}
+		System.out.println("***************************");
+		System.out.println("Test NIE erroneos");
+
+		for(String nie : listaNieErroneos){
+			testearIdentificacion(nie);
 		}
 	}
 	
@@ -60,7 +70,7 @@ public class CheckDniNie {
 		String[] letrasErroneas = {"Ñ","O","U","I"};
 		String dni = "";
 		Integer indiceRandom = ThreadLocalRandom.current().nextInt(0,3);
-		for (int i = 0; i< 9; i++){
+		for (int i = 0; i< 8; i++){
 			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,9);
 			dni = dni + String.valueOf(numeroRandom);
 		}
@@ -68,13 +78,13 @@ public class CheckDniNie {
 		listaDniErroneos.add(dni);
 	}
 	public static void crearNie(){
-		String[] letrasErroneas = {"Ñ","O","U","I"};
-		String[] primeraLetraNoPermitida = {"A","B","C","D","E,","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","V","W","Ñ"};
-		String nie = ""; // 23 letras no permitidas
+		char[] letrasErroneas = {'Ñ','I','O','U'};
+		String nie = ""; 
 		Integer indiceRandom = ThreadLocalRandom.current().nextInt(0,3);
-		Integer letraRandom = ThreadLocalRandom.current().nextInt(0,22);
-		for (int i = 0; i< 9; i++){
-			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,8);
+		Integer primeraLetra = ThreadLocalRandom.current().nextInt(65,88);
+		nie = nie + String.valueOf(Character.toChars(primeraLetra));
+		for (int i = 0; i< 7; i++){
+			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,9);
 			nie = nie + String.valueOf(numeroRandom);
 		}
 		nie = nie + letrasErroneas[indiceRandom];
