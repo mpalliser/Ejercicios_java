@@ -1,6 +1,5 @@
 package org.foobarspam.planetas;
 
-import java.util.ArrayList;
 import java.util.EnumSet;
 
 public enum Planeta {
@@ -36,7 +35,7 @@ public enum Planeta {
 	}
 	
 	private double gravedadSuperficie() {
-		return G * this.masa / (Math.pow(this.radio, 2));
+		return G * this.masa / Math.pow(this.radio, 2);
 	}
 	
 	public double masaTerrestre(double pesoHumano){
@@ -44,12 +43,10 @@ public enum Planeta {
 	}
 
 	public static EnumSet<Planeta> getPlanetasTerrestres() {
-		EnumSet<Planeta> planetasTerrestres = EnumSet.range(MERCURY, MARS);
-		return planetasTerrestres;
+		return EnumSet.range(MERCURY, MARS);
 	}
 
 	public static EnumSet<Planeta> getGigantesGaseosos() {
-		EnumSet<Planeta> planetasGaseosos = EnumSet.range(JUPITER, NEPTUNE);
-		return planetasGaseosos;
+		return EnumSet.range(JUPITER, NEPTUNE);
 	}
 }
