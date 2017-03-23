@@ -37,6 +37,4 @@ public class Elipse extends FiguraGeometrica {
 	public double area(){
 		return PI * semiejeMenor * semiejeMayor;
 	}
-	public void applyTheme() {throw new ArithmeticException();}
-
 }

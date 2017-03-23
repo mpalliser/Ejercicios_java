@@ -4,6 +4,6 @@ public interface Drawable {
 	void draw();
 
 	default void applyTheme(){
-		System.out.println("tema aplicado");
+		throw new UnsupportedOperationException("Operacion applyTheme sin implementar");
 	}
 }
