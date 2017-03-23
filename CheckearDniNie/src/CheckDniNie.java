@@ -62,16 +62,16 @@ public class CheckDniNie {
 				System.out.println(matchEncontrado + ":FAIL");
 			}
 		}else{
-				System.out.println("Match no encontrado");
+				System.out.println(documento + " Match no encontrado");
 		}
 	}
 	
 	public static void crearDni(){
 		String[] letrasErroneas = {"Ñ","O","U","I"};
 		String dni = "";
-		Integer indiceRandom = ThreadLocalRandom.current().nextInt(0,3);
+		Integer indiceRandom = ThreadLocalRandom.current().nextInt(0,4);
 		for (int i = 0; i< 8; i++){
-			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,9);
+			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,10);
 			dni = dni + String.valueOf(numeroRandom);
 		}
 		dni = dni + letrasErroneas[indiceRandom];
@@ -80,15 +80,14 @@ public class CheckDniNie {
 	public static void crearNie(){
 		char[] letrasErroneas = {'Ñ','I','O','U'};
 		String nie = ""; 
-		Integer indiceRandom = ThreadLocalRandom.current().nextInt(0,3);
+		Integer indiceRandom = ThreadLocalRandom.current().nextInt(0,4);
 		Integer primeraLetra = ThreadLocalRandom.current().nextInt(65,88);
 		nie = nie + String.valueOf(Character.toChars(primeraLetra));
 		for (int i = 0; i< 7; i++){
-			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,9);
+			Integer numeroRandom = ThreadLocalRandom.current().nextInt(0,10);
 			nie = nie + String.valueOf(numeroRandom);
 		}
 		nie = nie + letrasErroneas[indiceRandom];
 		listaNieErroneos.add(nie);
 	}
-	
 }
