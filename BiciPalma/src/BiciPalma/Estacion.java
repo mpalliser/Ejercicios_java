@@ -101,7 +101,7 @@ public class Estacion {
 		int anclajeAleatorio = 0;
 		boolean anclajeValido = false;
 		while (anclajeValido == false){
-			anclajeAleatorio = ThreadLocalRandom.current().nextInt(0, getNumeroAnclajes() +0);
+			anclajeAleatorio = ThreadLocalRandom.current().nextInt(0, getNumeroAnclajes());
 			if (this.anclajes[anclajeAleatorio] != null){
 				anclajeValido = true;
 			}
