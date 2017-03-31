@@ -1,6 +1,6 @@
-package figuras;
+package org.foobarspam.figuras;
 
-public class Rectangulo extends FiguraGeometrica implements Drawable {
+public class Rectangulo extends FiguraGeometrica {
 	
 	//Propiedades privadas
 	private double altura;
@@ -10,13 +10,18 @@ public class Rectangulo extends FiguraGeometrica implements Drawable {
 	public Rectangulo (String nombre){
 		super(nombre);
 	}
-
+	public Rectangulo(double altura,double anchura){
+		super();
+		this.altura = altura;
+		this.anchura = anchura;
+	}
 	public Rectangulo(String nombre,double altura,double anchura){
 		super(nombre);
 		this.altura = altura;
 		this.anchura = anchura;
 	}
 	
+
 	//geters, seters de altura y anchura
 	public double getAltura(){
 		return this.altura;
@@ -35,9 +40,4 @@ public class Rectangulo extends FiguraGeometrica implements Drawable {
 	@Override
 	public double area(){
 		return anchura * altura;
-	}
-
-	public void applyTheme(){
-		System.out.println("Tema aplicado en " + this.getNombre());
-	}
-}
+	}}
